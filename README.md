@@ -1,3 +1,3 @@
-# einfacher Test
+# Selenim test
 
-selenium test
+läuft mit firefox unter linux aktuell
