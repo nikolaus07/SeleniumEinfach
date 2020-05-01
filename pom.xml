@@ -8,5 +8,72 @@
     <artifactId>GitIntelliJ2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    
+
+    <dependencies>
+
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java    -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>3.141.59</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.11</version>
+        <exclusions>
+            <exclusion>
+                <artifactId>junit</artifactId>
+                <groupId>junit</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+    <dependency>
+        <groupId>org.jbehave.web</groupId>
+        <artifactId>jbehave-web-selenium</artifactId>
+        <version>3.5.5</version>
+        <type>jar</type>
+        <exclusions>
+            <exclusion>
+                <artifactId>selenium-java</artifactId>
+                <groupId>org.seleniumhq.selenium</groupId>
+            </exclusion>
+            <exclusion>
+                <artifactId>jbehave-core</artifactId>
+                <groupId>org.jbehave</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
+
+
+    <!-- https://mvnrepository.com/artifact/org.jbehave/jbehave-core -->
+    <dependency>
+        <groupId>org.jbehave</groupId>
+        <artifactId>jbehave-core</artifactId>
+        <version>4.6.1</version>
+    </dependency>
+
+
+    <dependency>
+        <groupId>org.jbehave.site</groupId>
+        <artifactId>jbehave-site-resources</artifactId>
+        <version>3.3.1</version>
+        <type>zip</type>
+    </dependency>
+
+
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.7.25</version>
+    </dependency>
+
+
+
+</dependencies>
+
+
 </project>
