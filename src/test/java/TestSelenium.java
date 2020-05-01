@@ -1,8 +1,6 @@
 import com.sun.org.slf4j.internal.Logger;
 import com.sun.org.slf4j.internal.LoggerFactory;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -15,9 +13,6 @@ public class TestSelenium {
 
         Logger logger = LoggerFactory.getLogger(TestSelenium.class);
         logger.trace("***** Hello klaus ***********");
-
-        //final org.slf4j.Logger logger = LoggerFactory.getLogger(TestSelenium.class);
-        //logger.error("klaus log feherl", "klaus_log");
 
         TestSelenium ts = new TestSelenium();
         ts.testFireFox();
