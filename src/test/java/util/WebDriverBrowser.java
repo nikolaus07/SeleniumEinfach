@@ -1,5 +1,7 @@
 package util;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +16,7 @@ import java.net.URL;
 public class WebDriverBrowser {
 
     private String browser;
+    private WebDriver driver_loc;
 
     public WebDriverBrowser(String browser){
         this.browser = browser;
@@ -31,31 +34,30 @@ public class WebDriverBrowser {
             FirefoxOptions ffo = new FirefoxOptions();
             ffo.setBinary(pathBin.getPath());
             ffo.setProfile(fp);  // FirefoxProfile
-            WebDriver driver = new FirefoxDriver();
-            return driver;
+            driver_loc = new FirefoxDriver();
 
-        // ********************
+            // ********************
         } else if (browser.toLowerCase().contains("chrome")){ // chrome ****
             System.setProperty("webdriver.chrome.driver","src/test/resources/driver/chromedriver");  // Linux und kopiert hierein
-            WebDriver driver = new ChromeDriver();
-            return driver;
+            driver_loc = new ChromeDriver();
 
-        // ********************************
+            // ********************************
         } else { // selenium-Grid *****
-            WebDriver driver = null;
             DesiredCapabilities cap;
             cap = DesiredCapabilities.firefox();
             cap.setBrowserName("firefox");
 
             try{
                 URL url = new URL("http://localhost:4444/wd/hub");
-                driver = new RemoteWebDriver(url, cap);
+                driver_loc = new RemoteWebDriver(url, cap);
             } catch (Exception e) {
                 System.out.println(e.toString());
             }
-
-            return driver;
         }
+
+        driver_loc.manage().window().setPosition(new Point(130, 130));
+        driver_loc.manage().window().setSize(new Dimension(1024, 768));
+        return driver_loc;
     }
 
 }

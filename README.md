@@ -9,8 +9,8 @@ Für Windows muss man geckodriver.exe downloaden und code anpassen.
 
 # cucumber-selenium-java-test
 Start 
-* right-mouse on GoogleTestRun.xml and run
-* right-mouse on feature-file and run
+* right-mouse on GoogleTestRun.xml and run  .OR.
+* right-mouse on feature-file and run     .OR.
 * run via maven. 
     In Run-configuration:
     clean test -PTestKlaus -DTestSuite222=GoogleTestRun.xml -f pom.xml
