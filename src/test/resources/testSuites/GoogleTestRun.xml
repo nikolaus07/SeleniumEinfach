@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Google" verbose="1" >
+
+    <!-- parameter name="operatingSystem" value="Linux"></parameter  -->
+
+    <test name="Google" >
+        <classes>
+            <class name="TestRunnerExe.TestRunnerGoogle" />
+        </classes>
+    </test>
+
+</suite>
