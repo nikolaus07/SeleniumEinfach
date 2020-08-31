@@ -8,7 +8,7 @@
 
 Diese Version läuft unter Linux mit geckodriver und Firefox (Version 80) + Chrome (Version 85)
 Für Windows muss man geckodriver.exe downloaden und code anpassen. <br><br>
-Test-run mit clone and intelliJ works wonderfull.
+Test-run with clone-repository and intelliJ works wonderfull.
 
 # Selenium-test
 * simple selenium-test in folder 'TestLabor'
